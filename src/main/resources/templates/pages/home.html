@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Spring</title>
+
+    <link rel="stylesheet" th:href="@{/css/output.css}">
+</head>
+
+<body>
+
+    <div th:replace="~{fragments/header :: header}"></div>
+
+    <main>
+        <section class="container mx-auto px-4 py-20">
+            <h1 class="text-4xl font-bold">
+                Welcome to Hello Spring
+            </h1>
+
+            <p class="mt-4 text-gray-600">
+                Your journey into Spring MVC starts here.
+            </p>
+
+            <a th:href="@{/login}"
+               class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg">
+                Login
+            </a>
+        </section>
+    </main>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
